@@ -5,7 +5,7 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 
 
 # Replace this with your code
-exitCond = 'a'
-while exitCond != 'q':
+userInput = ['']
+while userInput[0] != 'q':
     userInput = input('> ').split(' ')
     print(userInput)
