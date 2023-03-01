@@ -12,8 +12,11 @@ while userInput[0] != 'q':
     # the first member of userInput (which is userInput[0]) is always going to be the operator (+, -, *, /, mod, pow, square, cube)
     # next two members of userInput is going to be num1 and num2
     print(f"user input tokenized: {userInput}")
-    num1 = int(userInput[1])
-    
+    try:
+        num1 = int(userInput[1])
+    except:
+        num1 = 0
+    #num1 = int(userInput[1])
     try:
         num2 = int(userInput[2])
     except:
@@ -31,8 +34,10 @@ while userInput[0] != 'q':
         result = square(num1)
     elif userInput[0] == 'cube':
         result = cube(num1)
-    elif userInput[0] == 'power':
+    elif userInput[0] == 'pow':
         result = power(num1, num2)
     elif userInput[0] == 'mod':
         result = mod(num1, num2)
+    else:
+        result = 'That is not a valid expression :)'
     print(result)
